@@ -1,0 +1,95 @@
+@use "assets"
+
+header
+    background-color: assets.$independence-blue
+    height: 45vh
+    position: relative
+    text-align: center
+
+    .vertical-align-center
+        width: max-content
+        margin: 0 2rem
+    
+    h1, h2
+        font-weight: 400
+        color: assets.$light-tea-green
+        margin: 0
+
+    h1
+        font-size: 5rem
+        position: relative
+        padding: 0 0.5rem
+        overflow: hidden
+
+        span.typing
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            background-color: assets.$independence-blue
+            border-left: 0.5rem solid assets.$light-tea-green
+            animation: cursor 5s steps(22, end)
+            animation-fill-mode: forwards
+        
+        span.disappear
+            animation: disappear 5s
+            animation-fill-mode: forwards
+        
+    h2
+        margin-top: 1rem
+        font-size: 3rem
+        opacity: 0%
+        animation: slide-up 1s 5s, up-and-down 1.5s 5.5s
+        animation-fill-mode: forwards
+
+        span.rubik
+            color: assets.$meander-blue
+            font-size: 3.5rem
+
+@keyframes cursor
+    0%
+        width: 100%
+    40%
+        width: 46.2%
+    55%
+        width: 46.2%
+    57%
+        width: 50%
+    95%
+        width: 0%
+    100%
+        width: 0%
+        visibility: hidden
+
+@keyframes disappear
+    0%
+        visibility: visible
+    55%
+        visibility: visible
+    57%
+        visibility: hidden
+    100%
+        visibility: hidden
+        
+@keyframes slide-up
+    0%
+        opacity: 0%
+    100%
+        opacity: 100%
+        transition: all 3s ease-out
+
+@keyframes up-and-down
+    0%
+        transform: translateY(0%)
+    16.6%
+        transform: translateY(-10%)
+    33.3%
+        transform: translateY(0%)
+    50%
+        transform: translateY(-10%)
+    66.6%
+        transform: translateY(0%)
+    83.4%
+        transform: translateY(-10%)
+    100%
+        transform: translateY(0%)

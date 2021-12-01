@@ -1,0 +1,23 @@
+@use "assets"
+
+nav.grid
+    grid-template-columns: 1fr 1fr
+    background-color: assets.$meander-blue
+    grid-gap: 0.1rem
+    padding: 0.1rem 0
+
+    a.nav-item
+        background-color: white
+        padding: 1.75rem
+        text-align: center
+        text-transform: uppercase
+        outline: none
+        border: none
+        position: relative
+    
+    a.nav-item:hover, a.nav-item:focus
+        background-color: assets.$meander-blue
+        color: assets.$dark-sea-blue
+
+        span.bigger
+            font-size: 1.1rem

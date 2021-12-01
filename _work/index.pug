@@ -2,13 +2,16 @@ doctype html
 
 html(lang="en")
     include includes/head.pug
+    +head("rubik's Portfolio")
 
     body
         header
             .vertical-align-center
                 h1 Hello World#[span.disappear !]Wide Web!
                     span.typing
-                h2 rubik is here
+                h2 #[span.rubik rubik] is here
+            
+        include includes/navbar.pug
         
         p THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG; the quick brown fox jumps over the lazy dog.
 

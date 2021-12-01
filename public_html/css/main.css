@@ -1,19 +1,6 @@
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  color: #3B4461;
-}
-
 header {
   background-color: #3B4461;
-  height: 65vh;
+  height: 45vh;
   position: relative;
   text-align: center;
 }
@@ -41,20 +28,29 @@ header h1 span.typing {
   right: 0;
   background-color: #3B4461;
   border-left: 0.5rem solid #E1EEE0;
-  -webkit-animation: cursor 6s steps(22, end);
-          animation: cursor 6s steps(22, end);
+  -webkit-animation: cursor 5s steps(22, end);
+          animation: cursor 5s steps(22, end);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 header h1 span.disappear {
-  -webkit-animation: disappear 6s;
-          animation: disappear 6s;
+  -webkit-animation: disappear 5s;
+          animation: disappear 5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 header h2 {
   margin-top: 1rem;
   font-size: 3rem;
+  opacity: 0%;
+  -webkit-animation: slide-up 1s 5s, up-and-down 1.5s 5.5s;
+          animation: slide-up 1s 5s, up-and-down 1.5s 5.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+header h2 span.rubik {
+  color: #8BC7C8;
+  font-size: 3.5rem;
 }
 
 @-webkit-keyframes cursor {
@@ -128,6 +124,126 @@ header h2 {
     visibility: hidden;
   }
 }
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+  }
+}
+@keyframes slide-up {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+  }
+}
+@-webkit-keyframes up-and-down {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  16.6% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  33.3% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  66.6% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  83.4% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes up-and-down {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  16.6% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  33.3% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  66.6% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  83.4% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+nav.grid {
+  -ms-grid-columns: 1fr 0.1rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  background-color: #8BC7C8;
+  grid-gap: 0.1rem;
+  padding: 0.1rem 0;
+}
+nav.grid a.nav-item {
+  background-color: white;
+  padding: 1.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  position: relative;
+}
+nav.grid a.nav-item:hover, nav.grid a.nav-item:focus {
+  background-color: #8BC7C8;
+  color: #262637;
+}
+nav.grid a.nav-item:hover span.bigger, nav.grid a.nav-item:focus span.bigger {
+  font-size: 1.1rem;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #3B4461;
+}
+
+p, a, ol, ul {
+  max-width: 40rem;
+}
+
 .vertical-align-center {
   position: absolute;
   top: 50%;
@@ -136,8 +252,15 @@ header h2 {
           transform: translate(-50%, -50%);
 }
 
-p, a, ol, ul {
-  max-width: 40rem;
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
 }
 
 a {
@@ -163,22 +286,23 @@ a.button p {
   background-color: #E1EEE0;
   border: 0.15rem solid #3B4461;
   padding: 1rem;
-  -webkit-transform: translate(-3px, -3px);
-          transform: translate(-3px, -3px);
+  -webkit-transform: translate(-0.2rem, -0.2rem);
+          transform: translate(-0.2rem, -0.2rem);
   border-radius: 0.2rem;
 }
 
 a.button:hover p, a.button:focus p {
   background-color: #8BC7C8;
-  -webkit-transform: translate(-4px, -4px);
-          transform: translate(-4px, -4px);
+  color: #262637;
+  -webkit-transform: translate(-0.25rem, -0.25rem);
+          transform: translate(-0.25rem, -0.25rem);
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
 }
 
 a.button:active p {
-  -webkit-transform: translate(-1px, -1px);
-          transform: translate(-1px, -1px);
+  -webkit-transform: translate(-0.08rem, -0.08rem);
+          transform: translate(-0.08rem, -0.08rem);
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
   background-color: #E1EEE0;
