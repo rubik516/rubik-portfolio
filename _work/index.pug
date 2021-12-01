@@ -1,17 +1,17 @@
 doctype html
 
 html(lang="en")
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-
-        title Portfolio Homepage
-
-        link(rel="stylesheet" href="css/normalize.css")
-        link(rel="stylesheet" href="css/main.css")
-
-        script(src="js/script.min.js")
+    include includes/head.pug
 
     body
-        h1 Portfolio Homepage
-        h2 Homepage subtitle
+        header
+            .vertical-align-center
+                h1 Hello World#[span.disappear !]Wide Web!
+                    span.typing
+                h2 rubik is here
+        
+        p THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG; the quick brown fox jumps over the lazy dog.
+
+        a.button(href="#")
+            span.under-button
+            p Default Button

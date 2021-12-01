@@ -1,14 +1,130 @@
+$light-tea-green: #E1EEE0
+$buoyant-blue: #BADEDC
+$meander-blue: #8BC7C8
+$horizon-blue: #5D8EAC
+$independence-blue: #3B4461
+$dark-sea-blue: #262637
+
 *, *::after, *::before
     margin: 0
     padding: 0
     box-sizing: border-box
 
 body
-    font-family: sans-serif
+    font-family: 'Rubik', sans-serif
     font-size: 1rem
+    color: $independence-blue
 
-h1
-    font-size: 3rem
+header
+    background-color: $independence-blue
+    height: 65vh
+    position: relative
+    text-align: center
 
-h2
-    font-size: 2rem
+    .vertical-align-center
+        width: max-content
+        margin: 0 2rem
+    
+    h1, h2
+        font-weight: 400
+        color: $light-tea-green
+        margin: 0
+
+    h1
+        font-size: 5rem
+        position: relative
+        padding: 0 0.5rem
+        overflow: hidden
+
+        span.typing
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            // left: 0
+            background-color: $independence-blue
+            border-left: 0.5rem solid $light-tea-green
+            animation: cursor 6s steps(22, end)
+            animation-fill-mode: forwards
+        
+        span.disappear
+            animation: disappear 6s
+            animation-fill-mode: forwards
+        
+    h2
+        margin-top: 1rem
+        font-size: 3rem
+
+@keyframes cursor
+    0%
+        width: 100%
+    40%
+        width: 46.2%
+    55%
+        width: 46.2%
+    57%
+        width: 50%
+    95%
+        width: 0%
+    100%
+        width: 0%
+        visibility: hidden
+
+@keyframes disappear
+    0%
+        visibility: visible
+    55%
+        visibility: visible
+    57%
+        visibility: hidden
+    100%
+        visibility: hidden
+        
+
+.vertical-align-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+p, a, ol, ul
+    max-width: 40rem
+
+a
+    text-decoration: none
+    color: $independence-blue
+    display: inline-block
+
+a.button
+    position: relative
+    margin: 2rem
+
+    span.under-button
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        border: 0.15rem solid $independence-blue
+        border-radius: 0.2rem
+
+    p
+        background-color: $light-tea-green
+        border: 0.15rem solid $independence-blue
+        padding: 1rem
+        transform: translate(-3px, -3px)
+        border-radius: 0.2rem
+
+
+a.button:hover, a.button:focus
+    p
+        background-color: $meander-blue
+        transform: translate(-4px, -4px)
+        transition: 0.1s ease-in-out
+
+a.button:active
+    p
+        transform: translate(-1px, -1px)
+        transition: 0.1s ease-in-out
+        background-color: $light-tea-green
+        color: $independence-blue
