@@ -5,9 +5,14 @@ mixin nav(title)
                 span.bigger.vertical-align-center Who is rubik?
             a.nav-item(href="./")
                 span.bigger.vertical-align-center rubik's Portfolio
-        else
+        else if title == 'rubik\'s Portfolio'
             a.nav-item(href="./about_me.html")
                 span.bigger.vertical-align-center Who is rubik?
             a.nav-item.active-item(href="./")
+                span.bigger.vertical-align-center rubik's Portfolio
+        else
+            a.nav-item(href="./about_me.html")
+                span.bigger.vertical-align-center Who is rubik?
+            a.nav-item(href="./")
                 span.bigger.vertical-align-center rubik's Portfolio
             

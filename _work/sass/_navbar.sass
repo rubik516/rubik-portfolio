@@ -2,12 +2,17 @@
 
 nav.grid
     grid-template-columns: 1fr 1fr
-    background-color: assets.$meander-blue
+    background-color: assets.$dark-sea-blue
     grid-gap: 0.1rem
     padding: 0.1rem 0
+    position: sticky
+    top: 0
+    left: 0
+    right: 0
+    margin-bottom: 2rem
 
     a.nav-item
-        background-color: white
+        background-color: assets.$light-tea-green
         padding: 1.75rem
         text-align: center
         text-transform: uppercase
@@ -16,7 +21,7 @@ nav.grid
         position: relative
     
     a.nav-item.active-item
-        color: assets.$meander-blue
+        color: assets.$horizon-blue
         font-weight: 500
     
     a.nav-item:hover, a.nav-item:focus
