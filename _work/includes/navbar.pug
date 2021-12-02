@@ -1,5 +1,13 @@
-nav.grid
-    a.nav-item(href="./about_me.html")
-        span.bigger.vertical-align-center Who is rubik?
-    a.nav-item(href="./")
-        span.bigger.vertical-align-center rubik's Portfolio
+mixin nav(title)
+    nav.grid
+        if title == 'Who is rubik?'
+            a.nav-item.active-item(href="./about_me.html")
+                span.bigger.vertical-align-center Who is rubik?
+            a.nav-item(href="./")
+                span.bigger.vertical-align-center rubik's Portfolio
+        else
+            a.nav-item(href="./about_me.html")
+                span.bigger.vertical-align-center Who is rubik?
+            a.nav-item.active-item(href="./")
+                span.bigger.vertical-align-center rubik's Portfolio
+            
