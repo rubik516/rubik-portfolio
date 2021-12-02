@@ -10,6 +10,9 @@ header
         width: max-content
         margin: 0 2rem
     
+    span.my-name
+            color: assets.$meander-blue
+
     h1, h2
         color: assets.$light-tea-green
         margin: 0
@@ -21,6 +24,11 @@ header
         position: relative
         padding: 0 0.5rem
         overflow: hidden
+        width: max-content
+        margin: 0 auto
+
+        span.my-name
+            font-size: 5rem
 
         span.typing, span.typing-interrupting
             position: absolute
@@ -49,9 +57,8 @@ header
         opacity: 0%
         animation: slide-up 1s 5s, up-and-down 1.5s 5.5s
         animation-fill-mode: forwards
-
-        span.rubik
-            color: assets.$meander-blue
+        
+        span.my-name
             font-size: 3.5rem
 
 @keyframes cursor

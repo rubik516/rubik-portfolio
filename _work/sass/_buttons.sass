@@ -1,0 +1,39 @@
+@use "assets"
+
+a.button
+    position: relative
+    display: block
+    width: fit-content
+    text-decoration: none
+
+    span.under-button
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        border: 0.15rem solid assets.$independence-blue
+        border-radius: 0.2rem
+
+    p
+        background-color: assets.$light-tea-green
+        text-transform: uppercase
+        font-weight: 500
+        border: 0.15rem solid assets.$independence-blue
+        padding: 1rem
+        transform: translate(-0.2rem, -0.2rem)
+        border-radius: 0.2rem
+
+a.button:hover, a.button:focus
+    p
+        background-color: assets.$meander-blue
+        color: assets.$dark-sea-blue
+        transform: translate(-0.25rem, -0.25rem)
+        transition: 0.1s ease-in-out
+
+a.button:active
+    p
+        transform: translate(-0.08rem, -0.08rem)
+        transition: 0.1s ease-in-out
+        background-color: assets.$light-tea-green
+        color: assets.$independence-blue

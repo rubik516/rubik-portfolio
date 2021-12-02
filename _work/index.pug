@@ -2,30 +2,27 @@ doctype html
 
 html(lang="en")
     include includes/head.pug
-    +head('rubik\'s Portfolio')
+    +head('Celine\'s Portfolio')
 
     body
         header
             .vertical-align-center
                 h1 Hello World#[span.disappear !]Wide Web!
                     span.typing-interrupting
-                h2 #[span.rubik rubik] is here
+                h2 #[span.my-name Celine] is here
             
         include includes/navbar.pug
-        +nav('rubik\'s Portfolio')
+        +nav('Celine\'s Portfolio')
 
         section#web-dev
             a.project(href="gitlab_analyzer.html")
-                img(src)
+                img(src="img/GitLabAnalyzer.png" width="1000" height="1000" alt="GitLab Iteration Analyzer project thumbnail")
                 h2 GitLab Iteration Analyzer
-                p
+                p A web application that help programming course instructors evaluate students' code contribution in a development team.
+                .opacity-layer
         
         section#other
             section#mobile
             section#uiux
-        
-        p THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG; the quick brown fox jumps over the lazy dog.
 
-        a.button(href="#")
-            span.under-button
-            p Default Button
+        include includes/footer.pug

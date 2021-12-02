@@ -1,6 +1,7 @@
 @use 'assets'
 @import 'header'
 @import 'navbar'
+@import 'buttons'
 
 *, *::after, *::before
     margin: 0
@@ -14,8 +15,22 @@ body
     line-height: 1.25rem
     color: assets.$independence-blue
 
-p, ol, ul
-    max-width: 40rem
+footer
+    margin-top: 4rem
+
+    p
+        width: max-content
+        margin: 0 auto
+        padding: 1rem
+        opacity: 0.3
+        color: assets.$horizon-blue
+
+p, ol, ul, section h2
+    max-width: 50rem
+
+img
+    width: 100%
+    height: auto
 
 .vertical-align-center
     position: absolute
@@ -30,40 +45,63 @@ p, ol, ul
     display: grid
 
 a
-    text-decoration: none
+    text-decoration-style: dotted
+    text-underline-offset: 0.25rem
     color: assets.$independence-blue
-    display: inline-block
 
-a.button
+section
+    display: flex
+    flex-direction: column
+    align-items: center
+    h2, p
+        max-width: 40rem
+    
+    h2
+        font-size: 2rem
+        line-height: 2.4rem
+        text-align: center
+        margin-top: 4rem
+        margin-bottom: 1.5rem
+    
+    p
+        font-size: 1rem
+        line-height: 1.2rem
+        margin-bottom: 1rem
+
+section#web-dev
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin: 4rem
+
+a.project
+    text-decoration: none
+    transform: scale(1)
     position: relative
-    margin: 2rem
 
-    span.under-button
+    h2
+        margin: 1rem 0 0.5rem 0
+        text-align: left
+        font-size: 1.5rem
+        line-height: 1.8rem
+
+    .opacity-layer
         position: absolute
         top: 0
         right: 0
         bottom: 0
         left: 0
-        border: 0.15rem solid assets.$independence-blue
-        border-radius: 0.2rem
-
-    p
-        background-color: assets.$light-tea-green
-        border: 0.15rem solid assets.$independence-blue
-        padding: 1rem
-        transform: translate(-0.2rem, -0.2rem)
-        border-radius: 0.2rem
-
-a.button:hover, a.button:focus
-    p
         background-color: assets.$meander-blue
-        color: assets.$dark-sea-blue
-        transform: translate(-0.25rem, -0.25rem)
-        transition: 0.1s ease-in-out
+        opacity: 0.5
+        visibility: hidden
 
-a.button:active
-    p
-        transform: translate(-0.08rem, -0.08rem)
-        transition: 0.1s ease-in-out
-        background-color: assets.$light-tea-green
-        color: assets.$independence-blue
+a.project:hover, a.project:focus
+    transform: scale(1.02)
+
+    .opacity-layer
+        visibility: visible
+
+a.project:active
+    transform: scale(0.98)
+
+    .opacity-layer
+        visibility: visible
