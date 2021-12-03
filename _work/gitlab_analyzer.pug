@@ -57,13 +57,69 @@ html(lang="en")
 
             section#implementation.project-info
                 h2 Implementation
-                p The actual application was built using #[em React] framework for the front-end, and #[em Node.js] and #[em Express.js] for back-end. After a couple of weeks, we had a meeting with the customer for reviews and feedbacks, upon which I adjusted the Figma prototype to reflect the changes.
+                p With the Figma mockup at hand as a basis, the team started to work on the actual implementation of the application. After a couple of weeks, we had an iteration checkpoint with the customer for reviews.
+
+                p The customer gave our team very informative feedbacks, after which I adjusted the Figma mockup to reflect the changes.
+
+                figure
+                    img(src="img/GitLabAnalyzer_DesignSystem.png" width="873" height="583" alt="GitLab Iteration Analyzer project - Our team's design system on Figma")
+                    figcaption I started with updating the design system for our team, and this is the final version of the design system.
+
+                p One of the feedbacks we received from the customer was that they want the app navigation bar to always be present on the screen without the user having to toggle to open and close it.
+
+                figure
+                    img(src="img/GitLabAnalyzer_ClosedNav.png" width="1440" height="1024" alt="GitLab Iteration Analyzer project - Merge Request page preview with navigation bar closed")
+                    img(src="img/GitLabAnalyzer_OpenNav.png" width="1440" height="1024" alt="GitLab Iteration Analyzer project - Merge Request page preview with navigation bar open")
+                    figcaption Before the feedbacks, the navigation bar has to be toggled to close and open
+
+                figure
+                    img(src="img/GitLabAnalyzer_NewNavBar.png" width="1440" height="1024" alt="GitLab Iteration Analyzer project - Merge Request page preview with navigation bar always on the screen without having to toggle")
+                    figcaption Now, merge Request page preview with navigation bar always on the screen without having to toggle
+
+                figure
+                    img(src="img/GitLabAnalyzer_ClusteredInfoForMR.png" width="1373" height="712" alt="GitLab Iteration Analyzer project - Merge Request page preview with clustered display of information")
+                    img(src="img/GitLabAnalyzer_CleanDisplayInfoForMR.png" width="1373" height="712" alt="GitLab Iteration Analyzer project - Merge Request page preview with clean display of information")
+                    figcaption The display of information about a merge request was adjusted based on the customer's feedbacks: The clustered information in one column is now shown nicely in two columns.
+                
+                figure
+                    img(src="img/GitLabAnalyzer_refined_prototype.png" width="1440" height="677" alt="GitLab Iteration Analyzer project - Refined prototype on Figma")
+                    figcaption Refined prototype based on the customer's feedbacks.
 
             section#challenge.project-info
                 h2 Challenge
-                p Beside being the gate-keeper of the UI/UX design of our application, I was a part of the front-end team. Having no previous experience with web development, let alone using React, I had little experience with both the framework and the technical concepts of the web itself, I had to picked up the necessary skills quickly to catch up with my other team members. Luckily, my teammates were really understanding and helped me out a lot with learning React, so by the end of the project, I could have implemented a full page of the application by myself, from the working with the GitLab API to save data in the database, to passing data to the front end and implementing React components to display the content on the page.
+                p Beside being the gate-keeper of the UI/UX design of our application, I was a part of the front-end team. The actual application was built using #[em React] framework for the front-end, and #[em Node.js] and #[em Express.js] for the back-end development. Having no previous experience with web concepts, let alone using the tools and frameworks for development, I had little involvement in using the mentioned frameworks and had to picked up the necessary skills quickly to catch up with my other team members.
+                
+                p I admittedly was overwhelmed at first, but luckily, my teammates were really understanding and helped me out a lot with learning React. By the end of the project, I managed to implement a full page of the application by myself from start to finish, successfully getting around to retrieving GitLab merge requests' and issues' notes (or comments) through GitLab API, saving the data in the database, and implementing React components to display the content on the page.
+
+                figure
+                    img(src="img/GitLabAnalyzer_MergeRequestNotes.png" width="1422" height="732" alt="GitLab Iteration Analyzer project - Preview of the Comment page with the list of comments left by developers on merge requests in a repository.")
+                    img(src="img/GitLabAnalyzer_IssueNotes.png" width="1422" height="732" alt="GitLab Iteration Analyzer project - Preview of the Comment page with the list of comments left by developers on issues in a repository.")
+                    figcaption The comment page of the application implemented by me.
 
             section#result.project-info
                 h2 Result
+                p There were 7 teams in total who worked on this GitLab Iteration Analyzer web application, with the same specifications and requirements, but only one team's product would be chosen by the customer to progress to continued development and would be put into active use in the future. Our team was chosen, and we won the #[strong Customer's Choice Award]!!! (Yay!)
+
+                img(src="img/Certificate_of_Achievement_Ceres.png" width="3300" height="2550" alt="Team Ceres's Certificate of Achievement for the GitLab Iteration Analyzer - Customer's Choice")
+
+            section#view-project.project-info
+                h2 The application
+                p Check out our team's interactive prototype of GitLab Iteration Analyzer on Figma below.
+
+                a.button(href="https://www.figma.com/file/Nl8BDXRNgSs6sOEdg1trA8/GitLabAnalyzer-Prototype?node-id=156%3A2")
+                        span.under-button
+                        p Go to Figma prototype
+
+                p While the actual application is not available for public use as of the moment, you can watch our team's presentation of the final product on YouTube.
+
+                a.button(href="https://youtu.be/56KG-0rb1hc")
+                        span.under-button
+                        p Watch our presentation
+
+                p.bold.uppercase Final note:
+                p The web application itself went to further development after the course, and has been carried out by another developer team ever since.
+
+
+                    
         
         include includes/footer.pug

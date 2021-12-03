@@ -24,19 +24,19 @@ body
 
 footer p
     margin: 0 auto
-    opacity: 0.3
+    opacity: 0.5
     color: assets.$horizon-blue
 
 p, ol, ul, figcaption
     max-width: 50rem
 
 img
-    width: 100%
+    max-width: 100%
     height: auto
 
 figcaption
     margin: 0 auto
-    opacity: 0.3
+    opacity: 0.5
     color: assets.$horizon-blue
 
 
@@ -54,13 +54,20 @@ figcaption
 .block
     display: block
 
+.uppercase
+    text-transform: uppercase
+
+.bold
+    font-weight: 600
+
+main
+    max-width: 50rem
+    display: flex
+    flex-direction: column
+    text-align: justify
+    margin: 0 auto
+
 aside
-    h2.uppercase
-        text-transform: uppercase
-
-    h2.bold
-        font-weight: 600
-
     li.tag
         display: inline-block
         background-color: assets.$light-tea-green
@@ -77,10 +84,14 @@ section.bio, section.project-info
     
     h2
         text-align: center
+        background-color: assets.$light-tea-green
 
 section#web-dev
     display: grid
-            
+
+section#view-project.project-info
+     display: block
+
 a.project
     text-decoration: none
     transform: scale(1)
