@@ -29,85 +29,23 @@ header
 
         span.my-name
             font-size: 5rem
-
-        span.typing, span.typing-interrupting
-            position: absolute
-            top: 0
-            bottom: 0
-            right: 0
-            background-color: assets.$independence-blue
-            border-left: 0.5rem solid assets.$light-tea-green
-        
-        span.typing
-            animation: typing 5s steps(22, end), cursor .5s steps(1, start) infinite
-            animation-fill-mode: forwards
-
-        span.typing-interrupting
-            animation: typing-interrupt 5s steps(22, end), cursor .5s steps(1, start) infinite
-            animation-fill-mode: forwards
-        
-        span.disappear
-            animation: disappear 5s
-            animation-fill-mode: forwards
         
     h2
         margin-top: 1rem
         font-size: 3rem
         line-height: 3.75rem
         opacity: 0%
-        animation: slide-up 1s 5s, up-and-down 1.5s 5.5s
+    
+    h2#subtitle-homepage
+        animation: slide-up 1s 6.8s, up-and-down 1.5s 7.2s
+        animation-fill-mode: forwards
+
+    h2#subtitle-about
+        animation: slide-up 1s 4.3s, up-and-down 1.5s 4.8s
         animation-fill-mode: forwards
         
         span.my-name
             font-size: 3.5rem
-
-@keyframes cursor
-    0%
-        border-left: none
-    50%
-        border-left: 0.5rem solid assets.$light-tea-green
-    100%
-        border-left: none
-        
-@keyframes typing
-    0%
-        width: 100%
-    90%
-        width: 0%
-        border-left: 0.5rem solid assets.$light-tea-green
-        visibility: visible
-    100%
-        width: 0%
-        border-left: none
-        visibility: hidden
-
-@keyframes typing-interrupt
-    0%
-        width: 100%
-    40%
-        width: 46.2%
-    55%
-        width: 46.2%
-    60%
-        width: 49%
-    90%
-        width: 0%
-        border-left: 0.5rem solid assets.$light-tea-green
-        visibility: visible
-    100%
-        width: 0%
-        border-left: none
-        visibility: hidden
-
-@keyframes disappear
-    0%
-        visibility: visible
-    55%
-        visibility: visible
-    60%
-        visibility: hidden
-    100%
-        visibility: hidden
         
 @keyframes slide-up
     0%

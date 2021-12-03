@@ -1,15 +1,17 @@
 doctype html
 
 html(lang="en")
-    include includes/head.pug
-    
-    +head("Who is Celine?")
+    head
+        include includes/head.pug
+        +head("Who is Celine?")
+
+        script(src="js/typing-with-my-name.min.js" defer)
+
     body
         header
             .vertical-align-center
-                h1 Who is #[span.my-name Celine]?
-                    span.typing
-                h2 Web Designer &amp; Web Developer
+                h1.typing Who is #[span.my-name Celine]?
+                h2#subtitle-about Web Designer &amp; Web Developer
         
         include includes/navbar.pug
         +nav("Who is Celine?")

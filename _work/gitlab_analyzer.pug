@@ -1,14 +1,16 @@
 doctype html
 
 html(lang="en")
-    include includes/head.pug
-    +head('GitLab Iteration Analyzer')
+    head
+        include includes/head.pug
+        +head('GitLab Iteration Analyzer')
+
+        script(src="js/typing-normal.min.js" defer)
 
     body
         header
             .vertical-align-center
-                h1 GitLab Iteration Analyzer
-                    span.typing.no-interrupt
+                h1.typing GitLab Iteration Analyzer
             
         include includes/navbar.pug
         +nav('GitLab Iteration Analyzer')

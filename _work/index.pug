@@ -1,15 +1,17 @@
 doctype html
 
 html(lang="en")
-    include includes/head.pug
-    +head('Celine\'s Portfolio')
+    head
+        include includes/head.pug
+        +head('Celine\'s Portfolio')
+
+        script(src="js/typing-interrupting.min.js" defer)
 
     body
         header
             .vertical-align-center
-                h1 Hello World#[span.disappear !]Wide Web!
-                    span.typing-interrupting
-                h2 #[span.my-name Celine] is here
+                h1.typing Hello World Wide Web!
+                h2#subtitle-homepage #[span.my-name Celine] is here
             
         include includes/navbar.pug
         +nav('Celine\'s Portfolio')
