@@ -3,12 +3,10 @@
 header
     background-color: assets.$independence-blue
     height: 45vh
-    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
     text-align: center
-
-    .vertical-align-center
-        width: max-content
-        margin: 0 2rem
     
     span.my-name
             color: assets.$meander-blue
@@ -17,23 +15,8 @@ header
         color: assets.$light-tea-green
         margin: 0
         font-weight: 500
-
-    h1
-        font-size: 4.5rem
-        line-height: 5.625rem
-        position: relative
-        padding: 0 0.5rem
-        overflow: hidden
-        width: max-content
-        margin: 0 auto
-
-        span.my-name
-            font-size: 5rem
         
     h2
-        margin-top: 1rem
-        font-size: 3rem
-        line-height: 3.75rem
         opacity: 0%
     
     h2#subtitle-homepage

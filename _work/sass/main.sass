@@ -17,16 +17,12 @@ body
     color: assets.$independence-blue
 
 footer
-    margin-top: 4rem
-
     p
-        // width: max-content
         margin: 0 auto
-        padding: 1rem
         opacity: 0.3
         color: assets.$horizon-blue
 
-p, ol, ul, section h2
+p, ol, ul
     max-width: 50rem
 
 img
@@ -36,14 +32,16 @@ img
 .vertical-align-center
     position: absolute
     top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    transform: translateY(-50%)
 
 .flex
     display: flex
 
 .grid
     display: grid
+
+.block
+    display: block
 
 a
     text-decoration-style: dotted
@@ -54,28 +52,18 @@ section
     display: flex
     flex-direction: column
     align-items: center
+
     h2, p
         max-width: 40rem
-    
-    h2
-        font-size: 2rem
-        line-height: 2.4rem
-        text-align: center
-        margin-top: 4rem
-        margin-bottom: 1.5rem
-    
-    p
-        font-size: 1rem
-        line-height: 1.2rem
-        margin-bottom: 1rem
 
 section#web-dev
     display: grid
-
+            
 a.project
     text-decoration: none
     transform: scale(1)
     position: relative
+    border-bottom: 0.1rem solid rgba(93, 142, 172, 0.3)
 
     h2
         margin: 1rem 0 0.5rem 0
