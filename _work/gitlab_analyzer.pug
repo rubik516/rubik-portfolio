@@ -9,31 +9,61 @@ html(lang="en")
 
     body
         header
-            .vertical-align-center
-                h1.typing GitLab Iteration Analyzer
+            h1.typing GitLab Iteration Analyzer
             
         include includes/navbar.pug
         +nav('GitLab Iteration Analyzer')
 
-        p As part of a software development methodologies course at Simon Fraser University, over the span of 4 months, we, a team of 8 student developers, implemented a web application that assists programming course instructors evaluate students' code contribution within a development team.
+        aside
+            section#my-role
+                h2.bold.uppercase My role
+                ul
+                    li.tag Web developer
+                    li.tag UI designer
+                    li.tag Product owner
+            
+            section#skillsets
+                h2.bold.uppercase Technical skills and tools
+                ul
+                    li.tag HTML5
+                    li.tag CSS3
+                    li.tag TypeScript
+                    li.tag Figma
+                    li.tag React
+                    li.tag Node.js
+                    li.tag Express
+                    li.tag Postgres
+                    li.tag API
 
-        section#project-overview
-            h2 Project Overview
-            p The main purpose of this 4-month project is to mimic an Agile development team in the real world industry, allowing the students to collaborate with other student developers in a Scrum team, apply software development methods learned from the course, as well as get a hands on practice of the skills and theoretical concepts learned from the previous courses in their degree. It is also an opportunity for students to walk through the whole process of developing an application from start to the end, including requirement analysis, application design and implementation, as well as testing and deployment, while working on a product that would be delivered to the real customer at the end of the course.
+        main
+            section#project-overview.project-info
+                h2 Project Overview
+                p As part of a software development methodologies course at Simon Fraser University, over the span of 4 months, we, a team of 8 student developers, implemented a web application that assists programming course instructors evaluate students' code contribution within a development team.
+                p The main purpose of this 4-month project is to mimic an Agile development team in the industry, allowing the students to collaborate with other students in a Scrum team, applying software development methods and getting a hands on practice of the theoretical concepts, while working on a product that would be delivered to the real-world customer by the end of the course.
 
-        section#analyze
-            h2 Requirement Analysis
-            p Upon receiving the requirement documents and specifications from the customer, our team had a meeting to analyze and break down the requirements into features for the application. With UI/UX design being my liking, I took initiative and offered to turned the features that we were still brainstorming to a Figma prototype in order for us to better visualize the application's flow.
+            section#analyze.project-info
+                h2 Requirement Analysis
+                p Upon receiving the requirement documents and specifications from the customer, our team conducted a meeting to analyze and break down the requirements into potential implementable features for the application. Having a strong organizational skills and an enthusiasm for UI/UX design, I took initiative and turned the team's brainstormed ideas to a Figma prototype in order for us to better visualize the application.
 
-        section#implementation
-            h2 Implementation
-            p Having the Figma prototype that I created, the team started to implement the actual application, which was built using Node.js and Express.js for back-end development, and React.js for the front-end development. After a couple of weeks, we had a meeting with the customer for reviews and feedbacks, upon which I adjusted the Figma prototype to reflect the changes.
+                figure
+                    img(src="img/GitLabAnalyzer_requirements.png" width="1026" height="946" alt="GitLab Iteration Analyzer project requirements")
+                    figcaption I turned this long and abstract requirement document...
 
-        section#challenge
-            h2 Challenge
-            p Beside being the gate-keeper of the UI/UX design of our application, I was a part of the front-end team. Having no previous experience with web development, let alone using React, I had little experience with both the framework and the technical concepts of the web itself, I had to picked up the necessary skills quickly to catch up with my other team members. Luckily, my teammates were really understanding and helped me out a lot with learning React, so by the end of the project, I could have implemented a full page of the application by myself, from the working with the GitLab API to save data in the database, to passing data to the front end and implementing React components to display the content on the page.
+                figure.last-item
+                    img(src="img/GitLabAnalyzer_initial_prototype.png" width="1432" height="677" alt="GitLab Iteration Analyzer project initial prototype")
+                    figcaption ...into this initial interactive prototype.
+                
+                p This was a rough prototype that captured the basic application's functionalities, and gave us the team a possible flow of the application. After proposing this Figma prototype, I was trusted by my team to be #[strong the gate-keeper of the application's overall UI design] (Yay!). 
 
-        section#result
-            h2 result
+            section#implementation.project-info
+                h2 Implementation
+                p The actual application was built using #[em React] framework for the front-end, and #[em Node.js] and #[em Express.js] for back-end. After a couple of weeks, we had a meeting with the customer for reviews and feedbacks, upon which I adjusted the Figma prototype to reflect the changes.
+
+            section#challenge.project-info
+                h2 Challenge
+                p Beside being the gate-keeper of the UI/UX design of our application, I was a part of the front-end team. Having no previous experience with web development, let alone using React, I had little experience with both the framework and the technical concepts of the web itself, I had to picked up the necessary skills quickly to catch up with my other team members. Luckily, my teammates were really understanding and helped me out a lot with learning React, so by the end of the project, I could have implemented a full page of the application by myself, from the working with the GitLab API to save data in the database, to passing data to the front end and implementing React components to display the content on the page.
+
+            section#result.project-info
+                h2 Result
         
         include includes/footer.pug

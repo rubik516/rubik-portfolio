@@ -3,8 +3,8 @@
         padding: 0 1rem
 
         h1
-            font-size: 1.5rem
-            line-height: 1.8rem
+            font-size: 1.6rem
+            line-height: 1.92rem
 
             span.my-name
                 font-size: 2rem
@@ -18,21 +18,35 @@
             span.my-name 
                 font-size: 1.5rem
                 line-height: 1.8rem
-    
-    main
+
+    main, aside
         margin: 4rem 1rem
 
         h2
             margin: 0
+    
+    aside
+        section#my-role
+            margin-bottom: 2rem
 
-    section.bio
+        h2
+            font-size: 1rem
+            margin-bottom: 0.5rem
+
+        li.tag
+            margin-right: 0.5rem
+            margin-bottom: 0.5rem
+            padding: 0.5rem
+            border-radius: 0.5rem
+
+    section.bio, section.project-info
         margin-bottom: 3rem
 
         h2
             margin: 0
             padding: 0
-            font-size: 1.75rem
-            line-height: 2.1rem
+            font-size: 1.5rem
+            line-height: 1.8rem
             margin-bottom: 1.25rem
         
         p
@@ -41,7 +55,17 @@
             line-height: 1.2rem
 
         a.button
+            margin: 0 auto
             margin-top: 1.5rem
+
+        figure
+            margin-top: 1.25rem
+            
+            figcaption
+                margin-bottom: 0.5rem
+        
+        figure.last-item
+            margin-bottom: 1.25rem
 
     section#web-dev
         grid-template-columns: 1fr
@@ -59,9 +83,6 @@
         a.project.last-item
             border-bottom: none
             padding-bottom: 0
-
-        p
-            max-width: 50rem
     
     footer
         padding: 0 1rem 2rem 1rem

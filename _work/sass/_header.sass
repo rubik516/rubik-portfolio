@@ -15,27 +15,31 @@ header
         color: assets.$light-tea-green
         margin: 0
         font-weight: 500
-        
-    h2
-        opacity: 0%
     
     h2#subtitle-homepage
+        opacity: 0
         animation: slide-up 1s 6.8s, up-and-down 1.5s 7.2s
         animation-fill-mode: forwards
 
     h2#subtitle-about
-        animation: slide-up 1s 4.3s, up-and-down 1.5s 4.8s
+        animation: up-and-down 1.5s 5s
         animation-fill-mode: forwards
-        
-        span.my-name
-            font-size: 3.5rem
+
+        #fragment-1
+            opacity: 0
+            animation: slide-up 1s 4.2s
+            animation-fill-mode: forwards
+        #fragment-2
+            opacity: 0
+            animation: slide-up 1s 4.6s
+            animation-fill-mode: forwards
         
 @keyframes slide-up
     0%
         opacity: 0
     100%
         opacity: 1
-        transition: all 3s ease-out
+        transition: all 3s ease-in-out
 
 @keyframes up-and-down
     0%

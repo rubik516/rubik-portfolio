@@ -16,18 +16,29 @@ body
     line-height: 1.25rem
     color: assets.$independence-blue
 
-footer
-    p
-        margin: 0 auto
-        opacity: 0.3
-        color: assets.$horizon-blue
+::-moz-selection
+    background: assets.$light-tea-green
 
-p, ol, ul
+::selection
+    background: assets.$light-tea-green
+
+footer p
+    margin: 0 auto
+    opacity: 0.3
+    color: assets.$horizon-blue
+
+p, ol, ul, figcaption
     max-width: 50rem
 
 img
     width: 100%
     height: auto
+
+figcaption
+    margin: 0 auto
+    opacity: 0.3
+    color: assets.$horizon-blue
+
 
 .vertical-align-center
     position: absolute
@@ -43,18 +54,29 @@ img
 .block
     display: block
 
+aside
+    h2.uppercase
+        text-transform: uppercase
+
+    h2.bold
+        font-weight: 600
+
+    li.tag
+        display: inline-block
+        background-color: assets.$light-tea-green
+
 a
     text-decoration-style: dotted
     text-underline-offset: 0.25rem
     color: assets.$independence-blue
 
-section
+section.bio, section.project-info
     display: flex
     flex-direction: column
     align-items: center
-
-    h2, p
-        max-width: 40rem
+    
+    h2
+        text-align: center
 
 section#web-dev
     display: grid
@@ -77,18 +99,19 @@ a.project
         right: 0
         bottom: 0
         left: 0
+        z-index: 5
         background-color: assets.$meander-blue
-        opacity: 0.5
-        visibility: hidden
+        opacity: 0
+        transition: 0.15s all ease-out
 
 a.project:hover, a.project:focus
     transform: scale(1.02)
 
     .opacity-layer
-        visibility: visible
+        opacity: 0.5
 
 a.project:active
     transform: scale(0.98)
 
     .opacity-layer
-        visibility: visible
+        opacity: 0.5
