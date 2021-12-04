@@ -16,6 +16,9 @@ body
     line-height: 1.25rem
     color: assets.$independence-blue
 
+    span.my-name
+            color: assets.$meander-blue
+
 ::-moz-selection
     background: assets.$light-tea-green
 
@@ -64,8 +67,6 @@ main
     max-width: 50rem
     display: flex
     flex-direction: column
-    text-align: justify
-    margin: 0 auto
 
 aside
     li.tag
@@ -75,7 +76,11 @@ aside
 a
     text-decoration-style: dotted
     text-underline-offset: 0.25rem
+    word-spacing: 0.3rem
     color: assets.$independence-blue
+
+a:hover, a:focus
+    font-weight: 500
 
 section.bio, section.project-info
     display: flex
@@ -84,13 +89,10 @@ section.bio, section.project-info
     
     h2
         text-align: center
-        background-color: assets.$light-tea-green
+        background: linear-gradient(0, transparent 40%, assets.$light-tea-green 60%)
 
 section#web-dev
     display: grid
-
-section#view-project.project-info
-     display: block
 
 a.project
     text-decoration: none
@@ -99,10 +101,8 @@ a.project
     border-bottom: 0.1rem solid rgba(93, 142, 172, 0.3)
 
     h2
-        margin: 1rem 0 0.5rem 0
-        text-align: left
-        font-size: 1.5rem
-        line-height: 1.8rem
+        text-transform: uppercase
+        font-weight: 500
 
     .opacity-layer
         position: absolute
