@@ -33,19 +33,21 @@ html(lang="en")
                     li.tag Node.js
                     li.tag Express
                     li.tag Postgres
-                    li.tag API
+                    li.tag REST API
 
         main
             section#project-overview.project-info
-                h2 Project Overview
+                div.full-width-bg
+                    h2 Project Overview
                 p As part of a software development methodologies course at Simon Fraser University, over the span of 4 months, we, a team of 8 student developers, implemented a web application that assists programming course instructors evaluate students' code contribution within a development team.
                 p The main purpose of this 4-month project is to mimic an Agile development team in the industry, allowing the students to collaborate with other students in a Scrum team, applying software development methods and getting a hands on practice of the theoretical concepts, while working on a product that would be delivered to the real-world customer by the end of the course.
 
             section#analyze.project-info
-                h2 Requirement Analysis
+                div.full-width-bg
+                    h2 Requirement Analysis
                 p Upon receiving the requirement documents and specifications from the customer, our team conducted a meeting to analyze and break down the requirements into potential implementable features for the application. Having a strong organizational skills and an enthusiasm for UI/UX design, I took initiative and turned the team's brainstormed ideas to a Figma prototype in order for us to better visualize the application.
 
-                figure
+                figure.wrapper
                     figure
                         img(src="img/GitLabAnalyzer_requirements.png" width="1026" height="946" alt="GitLab Iteration Analyzer project requirements")
                         figcaption I turned this long and abstract requirement document...
@@ -57,7 +59,8 @@ html(lang="en")
                 p This was a rough prototype that captured the basic application's functionalities, and gave us the team a possible flow of the application. After proposing this Figma prototype, I was trusted by my team to be #[strong the gate-keeper of the application's overall UI design] (Yay!). 
 
             section#implementation.project-info
-                h2 Implementation
+                div.full-width-bg
+                    h2 Implementation
                 p With the Figma mockup at hand as a basis, the team started to work on the actual implementation of the application. After a couple of weeks, we had an iteration checkpoint with the customer for reviews.
 
                 p The customer gave our team very informative feedbacks, after which I adjusted the Figma mockup to reflect the changes.
@@ -68,55 +71,62 @@ html(lang="en")
 
                 p One of the feedbacks we received from the customer was that they want the app navigation bar to always be present on the screen without the user having to toggle to open and close it.
 
-                figure
+                figure.wrapper
                     figure
                         img(src="img/GitLabAnalyzer_ClosedNav.png" width="1440" height="1024" alt="GitLab Iteration Analyzer project - Merge Request page preview with navigation bar closed")
-                        figcaption 1) A page with navigation bar closed
+                        figcaption a) A page with navigation bar closed
                     figure
                         img(src="img/GitLabAnalyzer_OpenNav.png" width="1440" height="1024" alt="GitLab Iteration Analyzer project - Merge Request page preview with navigation bar open")
-                        figcaption 2) A page with navigation bar open
-                    figcaption Before the feedbacks, the navigation bar has to be toggled to close and open
+                        figcaption b) A page with navigation bar open
+                    figcaption Before the customer's feedbacks, the app navigation bar has to be toggled to close (picture a) and open (picture b).
 
                 figure
                     img(src="img/GitLabAnalyzer_NewNavBar.png" width="1440" height="1024" alt="GitLab Iteration Analyzer project - Merge Request page preview with navigation bar always on the screen without having to toggle")
                     figcaption Now, merge Request page preview with navigation bar always on the screen without having to toggle
 
-                figure
+                p Another feedback from the customer was that the information displayed for a single merge request was difficult to read as it was not easy to immediately detect where one's eyes should focus on. To draw a clearer and more noticeable visual hierarchy to achieve readability within the page, I split the merge request's details into multiple columns, each of which displays only one piece of information about the merge request.
+
+                figure.wrapper
                     figure
                         img(src="img/GitLabAnalyzer_ClusteredInfoForMR.png" width="1373" height="712" alt="GitLab Iteration Analyzer project - Merge Request page preview with clustered display of information")
-                        figcaption 1) Clustered display of information
+                        figcaption a) Clustered display of information
                     figure
                         img(src="img/GitLabAnalyzer_CleanDisplayInfoForMR.png" width="1373" height="712" alt="GitLab Iteration Analyzer project - Merge Request page preview with clean display of information")
-                        figcaption 2) A cleaner display of information
-                    figcaption The display of information about a merge request was adjusted based on the customer's feedbacks: The clustered information in one column is now shown nicely in two columns.
+                        figcaption b) A cleaner display of information
+                    figcaption The display of information about a merge request was adjusted based on the customer's feedbacks: The clustered information in one column (picture a) is now shown nicely in multiple columns (picture b).
                 
                 figure
                     img(src="img/GitLabAnalyzer_refined_prototype.png" width="1440" height="677" alt="GitLab Iteration Analyzer project - Refined prototype on Figma")
                     figcaption Refined prototype based on the customer's feedbacks.
 
             section#challenge.project-info
-                h2 Challenge
+                div.full-width-bg
+                    h2 Challenge
                 p Beside being the gate-keeper of the UI/UX design of our application, I was a part of the front-end team. The actual application was built using #[em React] framework for the front-end, and #[em Node.js] and #[em Express.js] for the back-end development. Having no previous experience with web concepts, let alone using the tools and frameworks for development, I had little involvement in using the mentioned frameworks and had to picked up the necessary skills quickly to catch up with my other team members.
                 
                 p I admittedly was overwhelmed at first, but luckily, my teammates were really understanding and helped me out a lot with learning React. By the end of the project, I managed to implement a full page of the application by myself from start to finish, successfully getting around to retrieving GitLab merge requests' and issues' notes (or comments) through GitLab API, saving the data in the database, and implementing React components to display the content on the page.
 
-                figure
+                figure.wrapper
                     figure
                         img(src="img/GitLabAnalyzer_MergeRequestNotes.png" width="1422" height="732" alt="GitLab Iteration Analyzer project - Preview of the Comment page with the list of comments left by developers on merge requests in a repository.")
-                        figcaption 1) Displaying comments left on all merge requests in a repository
+                        figcaption a) Displaying comments left on all merge requests in a repository
                     figure
                         img(src="img/GitLabAnalyzer_IssueNotes.png" width="1422" height="732" alt="GitLab Iteration Analyzer project - Preview of the Comment page with the list of comments left by developers on issues in a repository.")
-                        figcaption 2) Displaying comments left on all issues in a repository
+                        figcaption b) Displaying comments left on all issues in a repository
                     figcaption The comment page of the application implemented by me.
 
             section#result.project-info
-                h2 Result
+                div.full-width-bg
+                    h2 Result
                 p There were 7 teams in total who worked on this GitLab Iteration Analyzer web application, with the same specifications and requirements, but only one team's product would be chosen by the customer to progress to continued development and would be put into active use in the future. Our team was chosen, and we won the #[strong Customer's Choice Award]!!! (Yay!)
 
-                img(src="img/Certificate_of_Achievement_Ceres.png" width="3300" height="2550" alt="Team Ceres's Certificate of Achievement for the GitLab Iteration Analyzer - Customer's Choice")
+                figure
+                    img(src="img/Certificate_of_Achievement_Ceres.png" width="3300" height="2550" alt="Team Ceres's Certificate of Achievement for the GitLab Iteration Analyzer - Customer's Choice")
+                    figcaption Our team received the Customer's Choice Certificate for a functional and usable application with a clean interface.
 
-            section#view-project.project-info
-                h2 The application
+            section#view-project.project-info.last-item
+                div.full-width-bg
+                    h2 The application
                 section.subsection
                     p Check out our team's interactive prototype of GitLab Iteration Analyzer on Figma below.
 
@@ -131,7 +141,7 @@ html(lang="en")
                             span.under-button
                             p Watch our presentation
 
-                section.subsection
+                section.subsection.last-item
                     p.bold.uppercase Final note:
                     p The web application itself went to further development after the course, and has been carried out by another developer team ever since.
 

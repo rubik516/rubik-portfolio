@@ -17,7 +17,7 @@ body
     color: assets.$independence-blue
 
     span.my-name
-            color: assets.$meander-blue
+        color: assets.$meander-blue
 
 ::-moz-selection
     background: assets.$light-tea-green
@@ -80,16 +80,27 @@ a
     color: assets.$independence-blue
 
 a:hover, a:focus
-    font-weight: 500
+    background-color: assets.$horizon-blue
+    color: white
 
 section.bio, section.project-info
     display: flex
     flex-direction: column
     align-items: center
     
-    h2
-        text-align: center
-        background: linear-gradient(0, transparent 40%, assets.$light-tea-green 60%)
+    .full-width-bg
+        width: 100%
+        background-color: white
+        position: sticky
+        z-index: 5
+        top: 4.2rem
+        display: inline-flex
+        justify-content: center
+        padding: 1rem
+
+        h2
+            text-align: center
+            background: linear-gradient(0, transparent 40%, assets.$light-tea-green 60%)
 
 section#web-dev
     display: grid
