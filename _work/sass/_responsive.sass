@@ -19,6 +19,11 @@
                 font-size: 1.5rem
                 line-height: 1.8rem
 
+    nav.grid
+        grid-template-columns: 1fr
+        grid-row-gap: 0.1rem
+        padding: 0.1rem 0
+
     main, aside
         margin: 4rem 1rem
 
@@ -109,12 +114,155 @@
     footer
         padding: 0 1rem 2rem 1rem
 
+@media (min-width: 26rem)
+    nav.grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 0.1rem
+        padding: 0.1rem 0
+
+    section.bio, section.project-info
+        .full-width-bg
+            position: sticky
+            z-index: 5
+            top: 4.2rem
+
+@media (min-width: 30rem)
+    header
+        padding: 0 2rem
+
+        h1
+            font-size: 2rem
+            line-height: 2.4rem
+
+            span.my-name
+                font-size: 2.25rem
+                line-height: 2.7rem
+            
+        h2
+            font-size: 1.5rem
+            line-height: 1.8rem
+            
+            span.my-name 
+                font-size: 1.75rem
+                line-height: 2.1rem
+
+    main, aside
+        margin-left: 2rem
+        margin-right: 2rem
+    
+    section.bio, section.project-info
+        h2
+            font-size: 1.75rem
+            line-height: 2.1rem
+        
+            span.my-name
+                font-size: 2.25rem
+                line-height: 2.7rem
+
+@media (min-width: 36rem)
+    header
+        padding: 0 3.5rem
+
+        h1
+            font-size: 2.25rem
+            line-height: 2.7rem
+
+            span.my-name
+                font-size: 2.5rem
+                line-height: 3rem
+            
+        h2
+            font-size: 1.75rem
+            line-height: 2.1rem
+            
+            span.my-name 
+                font-size: 2rem
+                line-height: 2.4rem
+
+    main, aside
+        margin-left: 3.5rem
+        margin-right: 3.5rem
+
+@media (min-width: 43rem)
+    header
+        padding: 0 4.5rem
+
+        h1
+            font-size: 2.75rem
+            line-height: 3.3rem
+
+            span.my-name
+                font-size: 3rem
+                line-height: 3.6rem
+            
+        h2
+            font-size: 2rem
+            line-height: 2.4rem
+            
+            span.my-name 
+                font-size: 2.25rem
+                line-height: 2.7rem
+
+    main, aside
+        margin-left: 4.5rem
+        margin-right: 4.5rem
+
+    section.bio, section.project-info
+        h2
+            font-size: 2rem
+            line-height: 2.4rem
+        
+            span.my-name
+                font-size: 2.5rem
+                line-height: 3rem
+
 @media (min-width: 45rem)
     section#web-dev
         grid-template-columns: 4fr
         margin: 2rem
 
-@media (min-width: 65rem)
+@media (min-width: 52rem)
+    header
+        padding: 0 6rem
+
+        h1
+            font-size: 3.25rem
+            line-height: 3.9rem
+
+            span.my-name
+                font-size: 3.5rem
+                line-height: 4.2rem
+            
+        h2
+            margin-top: 1rem
+            font-size: 2.5rem
+            line-height: 3rem
+            
+            span.my-name
+                font-size: 2.75rem
+                line-height: 3.3rem
+
+    main, aside
+        margin-left: 6rem
+        margin-right: 6rem
+    
+    section.bio, section.project-info
+        h2
+            font-size: 2.25rem
+            line-height: 2.7rem
+        
+            span.my-name
+                font-size: 2.75rem
+                line-height: 3.3rem
+
+@media (min-width: 61.25rem)
+    main, aside
+        margin: 0 auto 
+    
+    aside
+        margin-bottom: 4rem
+
+@media (min-width: 66.25rem)
     header
         h1
             font-size: 4.5rem
@@ -122,18 +270,24 @@
             
             span.my-name
                 font-size: 5rem
+                line-height: 6rem
 
         h2
-            margin-top: 1rem
             font-size: 3rem
             line-height: 3.75rem
             
             span.my-name
                 font-size: 3.5rem
+                line-height: 4.2rem
     
+    section.bio, section.project-info
+        h2
+            font-size: 2.5rem
+            line-height: 3rem
+        
+            span.my-name
+                font-size: 3rem
+                line-height: 3.6rem
+
     section#web-dev
         grid-template-columns: 1fr 1fr
-
-@media (min-width: 65rem)
-    section#web-dev
-        margin: 4rem
