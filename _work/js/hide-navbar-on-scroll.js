@@ -28,19 +28,24 @@ function hideNavBarOnScroll() {
 
 function hideNavBar(navBarHeight) {
     let prevScrollPosition = window.pageYOffset;
+    let navBar = document.getElementsByTagName("nav")[0];
     let sectionHeadings = document.querySelectorAll(".full-width-bg");
     
     window.onscroll = function() {
         let currentScrollPosition = window.pageYOffset;
         if (prevScrollPosition > currentScrollPosition) {
-            document.getElementsByTagName("nav")[0].style.top = "0";
+            navBar.classList.remove("top-hidden");
+            navBar.classList.add("top-sticky");
             for(let i = 0; i < sectionHeadings.length; i++) {
-                sectionHeadings[i].style.top = navBarHeight;
+                sectionHeadings[i].classList.remove("top-sticky");
+                sectionHeadings[i].classList.add("under-nav-sticky");
             }
         } else {
-            document.getElementsByTagName("nav")[0].style.top = "-" + navBarHeight;
+            navBar.classList.remove("top-sticky");
+            navBar.classList.add("top-hidden");
             for(let i = 0; i < sectionHeadings.length; i++) {
-                sectionHeadings[i].style.top = "0";
+                sectionHeadings[i].classList.remove("under-nav-sticky");
+                sectionHeadings[i].classList.add("top-sticky");
             }
         }
         prevScrollPosition = currentScrollPosition;

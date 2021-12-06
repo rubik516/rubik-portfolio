@@ -31,6 +31,12 @@
 
         a.nav-item
             min-height: 4rem
+        
+    nav.top-sticky
+        top: 0
+    
+    nav.top-hidden
+        top: -8.3rem
 
     main, main.max-width, aside.max-width
         margin: 5rem 1rem
@@ -67,6 +73,11 @@
             margin-bottom: 1rem
             position: sticky
             z-index: 5
+            
+        .full-width-bg.top-sticky    
+            top: 0
+
+        .full-width-bg.under-nav-sticky
             top: 8.3rem
 
         h2
@@ -154,10 +165,19 @@
         grid-template-columns: 1fr 1fr
         grid-gap: 0.1rem
         padding: 0.1rem 0
+    
+    nav.top-sticky
+        top: 0
+    
+    nav.top-hidden
+        top: -4.2rem
 
     section.bio, section.project-info
-        .full-width-bg
-            top: 4.1rem
+        .full-width-bg.top-sticky    
+            top: 0
+
+        .full-width-bg.under-nav-sticky
+            top: 4.2rem
 
 @media (min-width: 30rem)
     header
@@ -317,14 +337,23 @@
             span.bigger
                 font-size: 1.25rem
                 line-height: 1.5rem
+    
+    nav.top-sticky
+        top: 0
+    
+    nav.top-hidden
+        top: -4.7rem
 
     main, aside, main.max-width, aside.max-width
         margin-left: 6rem
         margin-right: 6rem
     
     section.bio, section.project-info        
-        .full-width-bg
-            top: 4.6rem
+        .full-width-bg.top-sticky    
+            top: 0
+
+        .full-width-bg.under-nav-sticky
+            top: 4.7rem
 
         h2
             font-size: 2.25rem
@@ -394,12 +423,21 @@
             span.bigger
                 font-size: 1.4rem
                 line-height: 1.68
+    
+    nav.top-sticky
+        top: 0
+    
+    nav.top-hidden
+        top: -4.9rem
 
     section.bio, section.project-info
         margin-bottom: 6rem
 
-        .full-width-bg
-            top: 4.85rem
+        .full-width-bg.top-sticky    
+            top: 0
+
+        .full-width-bg.under-nav-sticky
+            top: 4.9rem
 
         h2
             font-size: 2.5rem
@@ -440,11 +478,20 @@
                 font-size: 1.65rem
                 line-height: 1.98rem
 
+    nav.top-sticky
+        top: 0
+    
+    nav.top-hidden
+        top: -5.15rem
+
     section.bio, section.project-info
         margin-bottom: 8rem
 
-        .full-width-bg
-            top: 5.1rem
+        .full-width-bg.top-sticky    
+            top: 0
+
+        .full-width-bg.under-nav-sticky
+            top: 5.15rem
     
     section#web-dev
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr
