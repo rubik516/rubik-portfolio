@@ -30,9 +30,6 @@ footer p
     opacity: 0.5
     color: assets.$horizon-blue
 
-p, ol, ul, figcaption
-    max-width: 50rem
-
 img
     max-width: 100%
     height: auto
@@ -41,7 +38,9 @@ figcaption
     margin: 0 auto
     opacity: 0.5
     color: assets.$horizon-blue
-
+    display: flex
+    justify-content: center
+    text-align: justify
 
 .vertical-align-center
     position: absolute
@@ -64,7 +63,6 @@ figcaption
     font-weight: 600
 
 main, aside
-    max-width: 50rem
     display: flex
     flex-direction: column
 
@@ -76,7 +74,7 @@ aside
 a
     text-decoration-style: dotted
     text-underline-offset: 0.25rem
-    word-spacing: 0.3rem
+    word-spacing: 0.25rem
     color: assets.$independence-blue
 
 a:hover, a:focus

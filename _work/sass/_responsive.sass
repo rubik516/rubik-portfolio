@@ -1,4 +1,9 @@
 @media (min-width: 20rem)
+    p, ol, ul, aside h2, figcaption
+        font-size: 1rem
+        line-height: 1.2rem
+        max-width: 50rem
+
     header
         padding: 0 1rem
 
@@ -24,18 +29,29 @@
         grid-row-gap: 0.1rem
         padding: 0.1rem 0
 
-    main, aside
-        margin: 4rem 1rem
+        a.nav-item
+            min-height: 4rem
+
+    main, main.max-width, aside.max-width
+        margin: 5rem 1rem
 
         h2
             margin: 0
-    
-    aside
+
+    main
+        margin-top: 4rem
+
+    main.max-width, aside.max-width
+        max-width: 50rem
+
+    aside.max-width
+        margin-top: 6.5rem
+        margin-bottom: 0
+
         section#my-role
             margin-bottom: 2rem
 
         h2
-            font-size: 1rem
             margin-bottom: 0.5rem
 
         li.tag
@@ -46,6 +62,9 @@
 
     section.bio, section.project-info
         margin-bottom: 3rem
+
+        .full-width-bg
+            margin-bottom: 1rem
 
         h2
             margin: 0
@@ -58,15 +77,13 @@
                 line-height: 2.1rem
         
         section.subsection
-            margin-bottom: 2rem
+            margin-bottom: 3rem
         
         section.last-item
             margin-bottom: 0
         
         p
             margin-bottom: 1rem
-            font-size: 1rem
-            line-height: 1.2rem
 
         a.button
             margin: 0 auto
@@ -76,19 +93,30 @@
                 margin-bottom: 0
 
         figure
-            margin: 1.25rem 0
+            margin: 1rem 0
             
             figcaption
                 margin-bottom: 0.5rem
+                padding: 0.5rem 1.25rem 0 1.25rem
+
+            figcaption.outer
+                padding: 0 0.5rem
         
         figure.wrapper
             margin: 0
         
         figure.last-item
             margin-bottom: 1.25rem
+        
+        figure ~ p
+            margin-top: 1rem
 
+    section.bio.first-item
+        margin-top: 0.5rem
+    
     section#web-dev
         grid-template-columns: 1fr
+        margin-top: 2.5rem
 
         a.project
             padding-bottom: 4rem  
@@ -109,10 +137,14 @@
         a.project.last-item
             border-bottom: none
             padding-bottom: 0
-            margin-bottom: 3rem
+            margin-bottom: 4rem
     
     footer
         padding: 0 1rem 2rem 1rem
+
+        p, a
+            font-size: 1rem
+            line-height: 1.5rem
 
 @media (min-width: 26rem)
     nav.grid
@@ -124,7 +156,7 @@
         .full-width-bg
             position: sticky
             z-index: 5
-            top: 4.2rem
+            top: 4.1rem
 
 @media (min-width: 30rem)
     header
@@ -146,11 +178,13 @@
                 font-size: 1.75rem
                 line-height: 2.1rem
 
-    main, aside
+    main, aside, main.max-width, aside.max-width
         margin-left: 2rem
         margin-right: 2rem
     
     section.bio, section.project-info
+        margin-bottom: 4rem
+
         h2
             font-size: 1.75rem
             line-height: 2.1rem
@@ -179,7 +213,7 @@
                 font-size: 2rem
                 line-height: 2.4rem
 
-    main, aside
+    main, aside, main.max-width, aside.max-width
         margin-left: 3.5rem
         margin-right: 3.5rem
 
@@ -203,11 +237,17 @@
                 font-size: 2.25rem
                 line-height: 2.7rem
 
-    main, aside
+    main, aside, main.max-width, aside.max-width
         margin-left: 4.5rem
         margin-right: 4.5rem
+    
+    aside.max-width
+        margin-top: 8rem
 
     section.bio, section.project-info
+        .full-width-bg
+            margin-bottom: 1.5rem
+
         h2
             font-size: 2rem
             line-height: 2.4rem
@@ -215,13 +255,36 @@
             span.my-name
                 font-size: 2.5rem
                 line-height: 3rem
+        
+        p
+            margin-bottom: 1.25rem
+
+        figure
+            margin: 1.25rem 0
+        
+        figure ~ p
+            margin-top: 1.25rem
+
+    section#web-dev
+        margin-top: 4rem
+
+    section.bio.first-item, section.project-info.first-item
+        margin-top: 3rem
 
 @media (min-width: 45rem)
     section#web-dev
-        grid-template-columns: 4fr
-        margin: 2rem
+        grid-template-columns: 1fr 1fr
+        column-gap: 2rem
+
+        a.project
+            margin-top: 0
+            border-bottom: none
 
 @media (min-width: 52rem)
+    p, ol, ul, aside h2, a, figcaption
+        font-size: 1.15rem
+        line-height: 1.38rem
+
     header
         padding: 0 6rem
 
@@ -242,11 +305,23 @@
                 font-size: 2.75rem
                 line-height: 3.3rem
 
-    main, aside
+    nav.grid
+        a.nav-item
+            min-height: 4.5rem
+
+        a.nav-item:hover, a.nav-item:focus
+            span.bigger
+                font-size: 1.25rem
+                line-height: 1.5rem
+
+    main, aside, main.max-width, aside.max-width
         margin-left: 6rem
         margin-right: 6rem
     
-    section.bio, section.project-info
+    section.bio, section.project-info        
+        .full-width-bg
+            top: 4.6rem
+
         h2
             font-size: 2.25rem
             line-height: 2.7rem
@@ -254,15 +329,42 @@
             span.my-name
                 font-size: 2.75rem
                 line-height: 3.3rem
+        
+        p
+            margin-bottom: 3rem
+        
+        figure.wrapper
+            .grid.two-columns
+                display: grid
+                grid-template-columns: 1fr 1fr
+                column-gap: 2rem
+            
+            figcaption.outer
+                padding: 0 1rem
+        
+        figure ~ p
+            margin-top: 3rem
 
 @media (min-width: 61.25rem)
-    main, aside
+    main.max-width, aside.max-width
         margin: 0 auto 
+        margin-top: 4rem
     
-    aside
+    main, main.max-width, aside.max-width
         margin-bottom: 4rem
 
+    aside.max-width
+        margin-top: 8rem
+        margin-bottom: 4rem
+    
+    section#web-dev
+        column-gap: 2.5rem
+
 @media (min-width: 66.25rem)
+    p, ol, ul, aside h2, a, figcaption
+        font-size: 1.25rem
+        line-height: 1.5rem
+
     header
         h1
             font-size: 4.5rem
@@ -280,7 +382,21 @@
                 font-size: 3.5rem
                 line-height: 4.2rem
     
+    nav.grid
+        a.nav-item
+            min-height: 4.75rem
+        
+        a.nav-item:hover, a.nav-item:focus
+            span.bigger
+                font-size: 1.4rem
+                line-height: 1.68
+
     section.bio, section.project-info
+        margin-bottom: 6rem
+
+        .full-width-bg
+            top: 4.85rem
+
         h2
             font-size: 2.5rem
             line-height: 3rem
@@ -288,6 +404,43 @@
             span.my-name
                 font-size: 3rem
                 line-height: 3.6rem
-
+        
+        p
+            margin-bottom: 4rem
+    
     section#web-dev
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr
+        column-gap: 3rem
+
+@media (min-width: 80rem)
+    p, ol, ul, aside h2, main.max-width, aside.max-width
+        max-width: 60rem
+    
+    section#web-dev
+        grid-template-columns: 1fr 1fr 1fr 1fr
+
+@media (min-width: 120rem)        
+    p, ol, ul, aside h2, a
+        font-size: 1.5rem
+        line-height: 1.8rem
+
+    p, ol, ul, aside h2, main.max-width, aside.max-width
+        max-width: 70rem
+
+    nav.grid
+        a.nav-item
+            min-height: 5rem
+        
+        a.nav-item:hover, a.nav-item:focus
+            span.bigger
+                font-size: 1.65rem
+                line-height: 1.98rem
+
+    section.bio, section.project-info
+        margin-bottom: 8rem
+
+        .full-width-bg
+            top: 5.1rem
+    
+    section#web-dev
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
