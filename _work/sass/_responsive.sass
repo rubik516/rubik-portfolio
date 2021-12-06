@@ -72,8 +72,8 @@
         h2
             margin: 0
             padding: 0
-            font-size: 1.45rem
-            line-height: 1.74rem
+            font-size: 1.4rem
+            line-height: 1.68rem
         
             span.my-name
                 font-size: 1.75rem
@@ -259,6 +259,9 @@
         
         p
             margin-bottom: 1.25rem
+        
+        p.bold.uppercase
+            margin-bottom: 1rem
 
         figure
             margin: 1.25rem 0
@@ -445,3 +448,31 @@
     
     section#web-dev
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+
+@media (min-width: 52rem) and (max-height: 25rem)
+    header
+        h1
+            font-size: 2.75rem
+            line-height: 3.3rem
+
+            span.my-name
+                font-size: 3rem
+                line-height: 3.6rem
+        
+        h2
+            font-size: 2rem
+            line-height: 2.4rem
+
+            span.my-name
+                font-size: 2.25rem
+                line-height: 2.7rem
+    
+    nav.grid
+        a.nav-item
+            font-size: 1rem
+            line-height: 1.2rem
+        
+        a.nav-item:hover, a.nav-item:focus
+            span.bigger
+                font-size: 1.1rem
+                line-height: 1.32rem
